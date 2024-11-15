@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
+LABEL org.opencontainers.image.source="https://github.com/qMalte/keyhelp-cloudflare-utils"
+LABEL org.opencontainers.image.description="KeyHelp Cloudflare Utils"
+LABEL org.opencontainers.image.licenses=MIT
+
 RUN git clone https://github.com/streamlit/streamlit-example.git .
 
 RUN pip3 install -r requirements.txt
